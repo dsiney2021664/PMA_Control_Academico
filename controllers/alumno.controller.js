@@ -1,6 +1,8 @@
 const { response, json } = require('express');
 const bcryptjs = require('bcryptjs');
 const Alumno = require('../models/alumno');
+const Curso = require('../models/curso');
+
 
 const alumnosGet = async (req, res = response) => {
     const { limite, desde } = req.query;
@@ -70,13 +72,23 @@ const alumnosDelete = async (req, res) => {
 }
 
 const alumnosPost = async (req, res) => {
-    const { nombre } = req.body;
-    const alumno = new Alumno({ nombre });
+    const { nombre, apellido, correo, password, nombreCurso, role, estado } = req.body;
+ 
+    const cursos = await Curso.find({ nombre: { $in: nombreCurso } });
+
+    const alumno = new Alumno({ nombre, apellido, correo, password, role, estado });
+    alumno.cursos = cursos.map(cursos => cursos._id);
+
+    const salt = bcryptjs.genSaltSync();
+    alumno.password = bcryptjs.hashSync(password, salt);
 
 
     await alumno.save();
+    const cursoAsignado = await Curso.findById(cursos._id);
+
     res.status(200).json({
-        alumno
+        alumno,
+        curso: cursoAsignado
     });
 }
 

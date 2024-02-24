@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Cursos",
+    "dateExported": "2024-02-24T01:25:28.836Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ccd4b5ba-6471-47c9-9429-887ed8d6bd9f",
+            "colId": "754562fb-7405-49d1-9245-2f3c9e466f1d",
+            "containerId": "",
+            "name": "cusosPost",
+            "url": "http://localhost:3000/api/cursos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-17T05:22:00.420Z",
+            "modified": "2024-02-24T00:27:41.975Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Matematica\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "62295b4a-a8dd-49ed-915f-a64492b71b2f",
+            "colId": "754562fb-7405-49d1-9245-2f3c9e466f1d",
+            "containerId": "",
+            "name": "cursosGet",
+            "url": "http://localhost:3000/api/cursos",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-17T05:27:21.485Z",
+            "modified": "2024-02-17T05:27:27.336Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6dac76cc-ab9f-483a-9c02-7f8f9fb5c57e",
+            "colId": "754562fb-7405-49d1-9245-2f3c9e466f1d",
+            "containerId": "",
+            "name": "cusosPut",
+            "url": "http://localhost:3000/api/cursos/65d8ce8d2eb7b59962e76445",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-17T14:04:29.632Z",
+            "modified": "2024-02-23T17:04:58.686Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Aleman\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb91a8a9-8318-4a23-b68f-216a9307665b",
+            "colId": "754562fb-7405-49d1-9245-2f3c9e466f1d",
+            "containerId": "",
+            "name": "cursosDelete",
+            "url": "http://localhost:3000/api/cursos/65d8d0262eb7b59962e76450",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-17T14:06:12.644Z",
+            "modified": "2024-02-24T00:15:06.124Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
