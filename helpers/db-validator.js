@@ -1,5 +1,6 @@
 const Curso = require('../models/curso');
 const Alumno = require('../models/alumno');
+const Maestro = require('../models/maestro');
 
 const existeCursoById = async (id = '') => {
     const existeCurso = await Curso.findOne({ id });
@@ -21,6 +22,7 @@ const existeAlumnoById = async (id = '') => {
         throw new Error(`El alumno con el ${id} no existe `);
     }
 }
+
 
 module.exports = {
     existeCursoById,
