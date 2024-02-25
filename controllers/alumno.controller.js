@@ -4,7 +4,7 @@ const Alumno = require('../models/alumno');
 const Curso = require('../models/curso');
 
 
-const alumnosGet = async (req, res = response) => {
+const alumnosGet = async (req, res = response) => { 
     const { limite, desde } = req.query;
     const query = { estado: true };
 
